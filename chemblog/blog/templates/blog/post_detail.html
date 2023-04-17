@@ -11,9 +11,9 @@
                     <h1>{{ post.title }}</h1>
                     <h2 class="subheading">{{ post.title }}</h2>
                     <span class="meta">
-                        Posted by
+                        Postado por
                         <a href="#!">{{ post.author.first_name }} {{ post.author.last_name }}</a>
-                        on 
+                        em {{ post.date_created }}
                     </span>
                 </div>
             </div>
@@ -30,8 +30,9 @@
                 
                     
             </div>
-            <div style="display: flex; justify-content: center; align-items: center;">
-                <a href="{% url 'update_post' post.pk %}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Update</a>
+            <div style="display: flex; justify-content: center; align-items: center; gap: 3rem;">
+                <a style="font-size: 1rem;" href="{% url 'update_post' post.pk %}" class="btn btn-outline-primary" role="button" aria-pressed="true">Atualizar</a>
+                <a style="font-size: 1rem;" href="{% url 'delete_post' post.pk %}" class="btn btn-outline-danger" role="button" aria-pressed="true">Apagar</a>
             </div>
         </div>
     </div>

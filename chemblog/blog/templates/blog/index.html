@@ -26,9 +26,9 @@
                     <h3 class="post-subtitle"> {{ post.body }} </h3>
                 </a>
                 <p class="post-meta">
-                    Posted by
+                    Postado por
                     <a href="#!"> {{ post.author.first_name }} {{ post.author.last_name }} </a>
-                    on September 24, 2023
+                    em {{ post.date_created | date:"d-m-Y" }}
                 </p>
             </div>
             <!-- Divider-->
