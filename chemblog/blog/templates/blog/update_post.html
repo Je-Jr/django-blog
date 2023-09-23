@@ -8,7 +8,7 @@
         <div class="justify-content-center">
             <div class="mx-auto p-auto mt-4" style="width: 440px;">
                 <div class="post-heading" style="display: flex; text-align: center; width: 490px">
-                    <h1>Update blog post</h1>
+                    <h1>Atualizar uma postagem</h1>
                 </div>
             </div>
         </div>
@@ -22,6 +22,7 @@
                 <div class="form-group">
                     <form method="POST">
                         {% csrf_token %}
+                        {{ form.media }}
                         {{ form.as_p }}
                         <button class="btn btn-outline-dark">Atualizar</button>
                     </form>

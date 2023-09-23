@@ -6,9 +6,9 @@
 <header class="p-5 masthead">
     <div class="container position-relative px-10 px-lg-10">
         <div class="justify-content-center">
-            <div class="mx-auto p-1 mt-4" style="width: 440px;">
-                <div class="post-heading">
-                    <h1>Add blog post</h1>
+            <div class="mx-auto p-1 mt-3" style="width: 560px;">
+                <div class="post-heading" style="text-align: justify;">
+                    <h1>Adicionar um post</h1>
                 </div>
             </div>
         </div>
@@ -22,8 +22,9 @@
                 <div class="form-group">
                     <form method="POST">
                         {% csrf_token %}
+                        {{ form.media }}
                         {{ form.as_p }}
-                        <button class="btn btn-outline-dark">Post</button>
+                        <button class="btn btn-outline-dark">Adicionar</button>
                     </form>
                 </div>        
             </div>
